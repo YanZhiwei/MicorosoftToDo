@@ -8,7 +8,7 @@
         AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
     <Window.Resources>
         <Style x:Key="RadioButtonStyle" TargetType="{x:Type RadioButton}">
-            <Setter Property="FocusVisualStyle">
+            <!--<Setter Property="FocusVisualStyle">
                 <Setter.Value>
                     <Style>
                         <Setter Property="Control.Template">
@@ -20,7 +20,7 @@
                         </Setter>
                     </Style>
                 </Setter.Value>
-            </Setter>
+            </Setter>-->
             <Setter Property="Margin" Value="0 2 0 0" />
             <Setter Property="FontSize" Value="26" />
             <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -38,7 +38,8 @@
                                               Content="{TemplateBinding Content}" Grid.Column="1"
                                               ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False"
                                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              Margin="{TemplateBinding
+                                Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -119,6 +120,10 @@
                     </ListBox.ItemContainerStyle>
                     <ListBoxItem>
                         <RadioButton Style="{DynamicResource RadioButtonStyle}">
+                            <RadioButton.IsChecked>
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource AncestorType=ListBoxItem}" Mode="TwoWay"/>
+                            </RadioButton.IsChecked>
+
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Grid.Column="0" Text="&#xe635;" FontFamily="./Fonts/#iconfont" FontSize="22"
                                         Margin="10 0 0 0" Foreground="#218868" />
@@ -134,6 +139,9 @@
                     </ListBoxItem>
                     <ListBoxItem>
                         <RadioButton Style="{DynamicResource RadioButtonStyle}">
+                            <RadioButton.IsChecked>
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource AncestorType=ListBoxItem}" Mode="TwoWay"/>
+                            </RadioButton.IsChecked>
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Grid.Column="0" Text="&#xe6b6;" FontFamily="./Fonts/#iconfont" FontSize="22"
                                            Margin="10 0 0 0" Foreground="#EE3B3B" />
@@ -149,6 +157,9 @@
                     </ListBoxItem>
                     <ListBoxItem>
                         <RadioButton Style="{DynamicResource RadioButtonStyle}">
+                            <RadioButton.IsChecked>
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource AncestorType=ListBoxItem}" Mode="TwoWay"/>
+                            </RadioButton.IsChecked>
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Grid.Column="0" Text="&#xe6e1;" FontFamily="./Fonts/#iconfont" FontSize="22"
                                            Margin="10 0 0 0" Foreground="#218868" />
@@ -164,6 +175,9 @@
                     </ListBoxItem>
                     <ListBoxItem>
                         <RadioButton Style="{DynamicResource RadioButtonStyle}">
+                            <RadioButton.IsChecked>
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource AncestorType=ListBoxItem}" Mode="TwoWay"/>
+                            </RadioButton.IsChecked>
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Grid.Column="0" Text="&#xe614;" FontFamily="./Fonts/#iconfont" FontSize="22"
                                            Margin="10 0 0 0" Foreground="#EE3B3B" />
@@ -179,6 +193,9 @@
                     </ListBoxItem>
                     <ListBoxItem>
                         <RadioButton Style="{DynamicResource RadioButtonStyle}">
+                            <RadioButton.IsChecked>
+                                <Binding Path="IsSelected" RelativeSource="{RelativeSource AncestorType=ListBoxItem}" Mode="TwoWay"/>
+                            </RadioButton.IsChecked>
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Grid.Column="0" Text="&#xe755;" FontFamily="./Fonts/#iconfont" FontSize="22"
                                            Margin="10 0 0 0" Foreground="#218868" />
